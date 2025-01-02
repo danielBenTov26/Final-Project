@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+
+.language-selector {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding: 10px;
+}
+.language-selector button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.language-selector button:hover {
+  background-color: #ddd;
+}
+
+/* עיצוב בסיסי */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* כיווניות LTR */
+[dir="ltr"] .homepage {
+  text-align: left;
+}
+
+[dir="ltr"] .language-selector {
+  text-align: right;
+}
+
+/* כיווניות RTL */
+[dir="rtl"] .homepage {
+  text-align: right;
+}
+
+[dir="rtl"] .language-selector {
+  text-align: left;
+}
+
