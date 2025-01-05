@@ -1,26 +1,8 @@
+/* התאמות אישיות */
 .product {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
-  width: 150px;
   transition: transform 0.2s;
 }
 
 .product:hover {
   transform: scale(1.05);
-}
-
-.view-details-button {
-  color: white;
-  background-color: #007bff;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 10px;
-}
-
-.view-details-button:hover {
-  background-color: #0056b3;
 }

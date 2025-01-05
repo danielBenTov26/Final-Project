@@ -3,8 +3,10 @@ import './Category.css';
 
 const Category = ({ name }) => {
   return (
-    <div className="category">
-    {name}
+    <div className="card category shadow-sm">
+      <div className="card-body text-center">
+        <h5 className="card-title">{name}</h5>
+      </div>
     </div>
   );
 };

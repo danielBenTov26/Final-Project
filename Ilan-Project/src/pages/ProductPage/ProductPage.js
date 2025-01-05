@@ -3,28 +3,34 @@ import { useParams } from 'react-router-dom';
 import './ProductPage.css';
 
 const ProductPage = () => {
-  // קבלת פרטי המוצר מכתובת ה-URL
+  // Get product details from the URL
   const { id } = useParams();
 
-  // נתונים לדוגמה; ניתן לטעון נתונים משרת בעתיד.
+  // Example data; can load data from a server in the future.
   const product = {
     id,
     name: `Product ${id}`,
-    price: 100 * id,
+    price: (100 * id).toFixed(2),
     description: `This is a detailed description of Product ${id}.`,
-    image: 'https://via.placeholder.com/300', // תמונה לדוגמה
+    image: 'https://via.placeholder.com/300', // Placeholder image
   };
 
   return (
-    <div className="product-page">
-      <div className="product-page-image">
-        <img src={product.image} alt={product.name} />
-      </div>
-      <div className="product-page-info">
-        <h1>{product.name}</h1>
-        <p className="product-price">${product.price}</p>
-        <p className="product-description">{product.description}</p>
-        <button className="add-to-cart-button">Add to Cart</button>
+    <div className="container product-page mt-5">
+      <div className="row">
+        <div className="col-md-6 text-center">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="img-fluid rounded shadow"
+          />
+        </div>
+        <div className="col-md-6">
+          <h1 className="mb-3">{product.name}</h1>
+          <p className="product-price text-danger fs-4">₪{product.price}</p>
+          <p className="product-description">{product.description}</p>
+          <button className="btn btn-success btn-lg">Add to Cart</button>
+        </div>
       </div>
     </div>
   );
