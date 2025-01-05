@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Rubik', sans-serif;
 }
 
 .App-logo {
@@ -55,7 +56,7 @@
 
 /* עיצוב בסיסי */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Rubik', sans-serif;
   margin: 0;
   padding: 0;
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './HomePage.css';
+import Footer from '../../components/Footer/Footer';
+
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -48,6 +50,8 @@ const HomePage = () => {
           ))}
         </div>
       </section>
+
+          <Footer />
     </div>
   );
 };

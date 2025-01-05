@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import HomePage from './pages/HomePage/HomePage';
 import ProductPage from './pages/ProductPage/ProductPage';
-
+import '@fontsource/rubik';
+import './App.css';
 const App = () => {
   const { i18n } = useTranslation();
 
