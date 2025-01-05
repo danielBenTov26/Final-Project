@@ -13,20 +13,19 @@ const App = () => {
   };
 
   useEffect(() => {
-    // קביעת הכיווניות על בסיס השפה הנבחרת
     document.documentElement.dir = i18n.language === 'he' ? 'rtl' : 'ltr';
   }, [i18n.language]);
 
   return (
     <Router>
       <div>
-        {/* בורר שפה */}
+        {/*  Language selector */}
         <div className="language-selector">
           <button onClick={() => changeLanguage('en')}>English</button>
           <button onClick={() => changeLanguage('he')}>עברית</button>
         </div>
 
-        {/* ניהול נתיבים */}
+        {/* Routes management  */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/product/:id" element={<ProductPage />} />

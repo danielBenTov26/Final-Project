@@ -16,13 +16,13 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
-      {/* כותרת ראשית */}
+      {/* Main Title  */}
       <header className="homepage-header">
         <h1>{t('welcome')}</h1>
         <p>{t('welcome_subtitle')}</p>
       </header>
 
-      {/* קטגוריות */}
+      {/* Categories */}
       <section className="homepage-categories">
         <h2>{t('categories.title')}</h2>
         <div className="categories">
@@ -33,7 +33,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* מוצרים */}
+      {/* Products */}
       <section className="homepage-products">
         <h2>{t('featured_products')}</h2>
         <div className="products">

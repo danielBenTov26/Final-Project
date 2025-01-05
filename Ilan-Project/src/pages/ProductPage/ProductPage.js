@@ -3,16 +3,16 @@ import { useParams } from 'react-router-dom';
 import './ProductPage.css';
 
 const ProductPage = () => {
-  // קבלת פרטי המוצר מכתובת ה-URL
+  // Get product details from the URL
   const { id } = useParams();
 
-  // נתונים לדוגמה; ניתן לטעון נתונים משרת בעתיד.
+  // Example data; can load data from a server in the future.
   const product = {
     id,
     name: `Product ${id}`,
     price: 100 * id,
     description: `This is a detailed description of Product ${id}.`,
-    image: 'https://via.placeholder.com/300', // תמונה לדוגמה
+    image: 'https://via.placeholder.com/300', // Placeholder image
   };
 
   return (
