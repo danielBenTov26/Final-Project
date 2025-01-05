@@ -1,20 +1,28 @@
 import React from 'react';
-import './ProductDetails.css';
+import { useParams } from 'react-router-dom';
+import './ProductPage.css';
+import ProductDetails from '../../components/ProductDetails/ProductDetails';
+import Footer from '../../components/Footer/Footer';
 
-const ProductDetails = ({ product }) => {
+const ProductPage = () => {
+  // Get product details from the URL
+  const { id } = useParams();
+
+  // Example data; can load data from a server in the future.
+  const product = {
+    id,
+    name: `Product ${id}`,
+    price: (100 * id).toFixed(2),
+    description: `This is a detailed description of Product ${id}.`,
+    image: 'https://via.placeholder.com/300', // Placeholder image
+  };
+
   return (
-    <div className="product-details">
-      <div className="product-image">
-        <img src={product.image} alt={product.name} />
-      </div>
-      <div className="product-info">
-        <h1>{product.name}</h1>
-        <p className="product-price">${product.price.toFixed(2)}</p>
-        <p className="product-description">{product.description}</p>
-        <button className="add-to-cart-button">Add to Cart</button>
-      </div>
+    <div className="container product-page mt-5">
+      <ProductDetails product={product} />
+      <Footer />
     </div>
   );
 };
 
-export default ProductDetails;
+export default ProductPage;

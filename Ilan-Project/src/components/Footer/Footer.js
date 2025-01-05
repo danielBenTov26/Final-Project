@@ -3,8 +3,8 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <p>© 2025 My Store. All rights reserved.</p>
+    <footer className="footer bg-dark text-white text-center py-3">
+      <p>© 2025 עמותת איל"ן</p>
     </footer>
   );
 };

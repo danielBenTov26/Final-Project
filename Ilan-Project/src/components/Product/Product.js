@@ -4,12 +4,14 @@ import './Product.css';
 
 const Product = ({ name, price, id }) => {
   return (
-    <div className="product">
-      <h3>{name}</h3>
-      <p>${price.toFixed(2)}</p>
-      <Link to={`/product/${id}`} className="view-details-button">
-        View Details
-      </Link>
+    <div className="card product shadow-sm">
+      <div className="card-body text-center">
+        <h3 className="card-title">{name}</h3>
+        <p className="card-text">₪{price.toFixed(2)}</p>
+        <Link to={`/product/${id}`} className="btn btn-primary">
+          View Details
+        </Link>
+      </div>
     </div>
   );
 };
