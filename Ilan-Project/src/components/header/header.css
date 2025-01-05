@@ -1,0 +1,8 @@
+.header {
+
+    border-radius: 8px;
+  }
+  .bg-custom {
+    background-color: #006a69; /* צבע הרקע החדש */
+    color: white;
+  }
